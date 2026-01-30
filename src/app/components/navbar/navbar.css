@@ -6,6 +6,7 @@
     transition: all 0.5s ease;
     padding-inline: 32px;
 }
+
 .navbar-toggler {
     border: transparent;
     border-radius: 12px;
@@ -19,7 +20,8 @@
     border: 1px solid #262626;
 }
 
-.navbar-toggler svg {
+.navbar-toggler svg,
+.navbar-toggler i {
     width: 24px;
     height: 24px;
 }

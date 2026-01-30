@@ -118,6 +118,10 @@
     background: linear-gradient(to left, #ff69000d, transparent);
 }
 
+#selected-articles .custom-container {
+    position: relative;
+    z-index: 4;
+}
 
 #selected-articles .gradient-btn {
     border-radius: 12px;
