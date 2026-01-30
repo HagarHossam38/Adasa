@@ -1,0 +1,32 @@
+.section-label {
+    padding-inline: 16px;
+    padding-block: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #f97316;
+    background-color: #f973161a;
+    border: 1px solid #f973164d;
+    border-radius: 30px;
+
+}
+
+.section-label::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    background-color: #f97316;
+    border-radius: 50%;
+    animation: 2s infinite pulse;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

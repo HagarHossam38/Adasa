@@ -1,0 +1,261 @@
+<section id="hero-header" class="position-relative overflow-hidden d-flex justify-content-center align-items-center">
+    <app-grid-background></app-grid-background>
+    <div class="circle circle-orange"></div>
+    <div class="circle circle-orange2"></div>
+    <div class="circle circle-yellow"></div>
+    <div class="hero-container position-relative mx-auto z-3">
+        <div class="header-content  text-center">
+            <app-section-label>
+                <app-ping-dot></app-ping-dot>
+                <span class="small fw-medium" style="color: #d4d4d4;">مرحباً بك في عدسة</span>
+            </app-section-label>
+
+            <h1 class="header-title mb-3">اكتشف
+                <span class="gradient-text">فن</span><br>التصوير الفوتوغرافي
+            </h1>
+            <p class="mx-auto">انغمس في أسرار
+                المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.</p>
+            <div class="buttons d-flex flex-column flex-sm-row justify-content-center gap-4 mb-5">
+                <div class="btn gradient-btn d-flex justify-content-center align-items-center gap-2" routerLink="/blog">
+                    استكشتف المقالات
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="btn transparent-btn d-flex justify-content-center align-items-center gap-2"
+                    routerLink="/about">
+                    <i class="fa-solid fa-circle-info"></i>
+                    اعرف المزيد
+                </div>
+            </div>
+            <div class="glass-card-container row row-cols-2 row-cols-md-4 g-3 mx-auto">
+
+                <div class="col">
+                    <div class="glass-card p-3">
+                        <i class="fa-solid fa-newspaper mb-1"></i>
+                        <p class="font-bold gradient-text">+50</p>
+                        <p class="text-neutral-500 text-sm">مقالة</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="glass-card p-3">
+                        <i class="fa-solid fa-users  mb-1"></i>
+                        <p class="font-bold gradient-text">+10ألف</p>
+                        <p class="text-neutral-500 text-sm">قارئ</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="glass-card p-3">
+                        <i class="fa-solid fa-folder-openr mb-1"></i>
+                        <p class="font-bold gradient-text">4</p>
+                        <p class="text-neutral-500 text-sm">تصنيفات</p>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="glass-card p-3">
+                        <i class="fa-solid fa-pen-nib  mb-1"></i>
+                        <p class="font-bold gradient-text">6</p>
+                        <p class="text-neutral-500 text-sm">كاتب</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>
+
+<section id="selected-articles" class="position-relative overflow-hidden">
+    <div class="gradient-overlay position-absolute top-0 end-0 h-100 "> </div>
+    <div class="container-lg custom-container">
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end gap-3 mb-5">
+            <div>
+                <app-section-label>
+                    <app-ping-dot></app-ping-dot>
+                    <span class="small fw-medium" style="color: #d4d4d4;">مميز</span>
+                </app-section-label>
+                <h2 class="section-title text-white"> مقالات مختارة</h2>
+                <h2 class="section-subtitle max-w-lg"> محتوى منتقى لبدء رحلة تعلمك</h2>
+
+            </div>
+            <div class="btn gradient-btn d-flex justify-content-center align-items-center gap-2" routerLink="/blog">
+                عرض الكل
+                <i class="fa-solid fa-angle-left fa-sm"></i>
+            </div>
+        </div>
+        <div class="blog-list">
+            @for (article of blogPosts; track $index) {
+
+            @if ($index < 3){ <article class="blog position-relative overflow-hidden mb-4">
+                <a class="d-block" routerLink="\blog">
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col overflow-hidden img-container">
+                            <img class="w-100 h-100 object-fit-cover" [src]="article.image" [alt]="article.title">
+                            <div class="overlay-gradient"></div>
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge-gradient d-inline-flex align-items-center">
+                                    <i class="fa-solid fa-star"></i>
+                                    مميز
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col blog-content p-4 p-md-5 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3 gap-2">
+                                <span class="badge-light">{{article.category}}</span>
+                                <span class="d-flex align-items-center gap-1  text-neutral-500 small fw-normal">
+                                    <i class="fa-regular fa-clock"></i>
+                                    {{article.readTime}}
+                                </span>
+                            </div>
+                            <h2 class="card-title mb-3">
+                                {{article.title}}
+                            </h2>
+                            <!-- Description -->
+                            <p class="card-text text-neutral-400  mb-4 fw-normal">
+                                {{article.excerpt}}
+                            </p>
+                            <div class="blog-footer d-flex justify-content-between  mt-auto">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="position-relative">
+                                        <img [src]="article.author.avatar" [alt]="article.author.name" width="100%"
+                                            class="avatar-img object-fit-cover rounded-circle">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <p class="fw-semibold text-white m-0" style="font-size: 14px;">
+                                            {{article.author.name}} </p>
+                                        <p class="text-neutral-500 m-0" style="font-size: 12px;">
+                                            {{formatDateArabic(article.date)}}</p>
+                                    </div>
+                                </div>
+
+                                <span class="read-more d-inline-flex align-items-center fw-semibold">
+                                    اقرأ المقال
+                                    <i class="fa-solid fa-arrow-left arrow"></i>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </article>
+                } }
+        </div>
+    </div>
+</section>
+
+<section id="categories">
+    <div class="container-lg custom-container  mx-auto">
+        <div class="categories-header text-center">
+            <app-section-label>
+                <app-ping-dot></app-ping-dot>
+                <span class="small fw-medium" style="color: #d4d4d4;"> التصنيفات </span>
+            </app-section-label>
+
+            <h1 class="header-title mb-3">اكتشف
+                استكشف حسب الموضوع
+            </h1>
+            <p class="mx-auto text-neutral-400">استكشف حسب الموضوع</p>
+
+        </div>
+        <div class="row row-cols-2 row-cols-md-4 g-4 g-md-3">
+            @for (category of categories; track $index) {
+            <div class="col">
+                <a routerLink="/blog" class=" category-item d-block  rounded-4 p-4 overflow-hidden">
+                    <div class="overlay-layer position-absolute top-0 start-0 w-100 h-100 "></div>
+                    <div class="category-content  position-relative z-3">
+                        <div class="icon-container">
+                            <i [className]="category.icon"></i>
+                        </div>
+                        <h3 class="fw-bold text-white mb-1 element">{{category.name}}</h3>
+                        <p class="text-neutral-500 m-0">{{category.count}}مقالة</p>
+                        <div
+                            class="position-absolute arrow-open rounded-circle d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-angle-left text-white"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            }
+        </div>
+
+    </div>
+</section>
+
+<section id="recent-articles" class="position-relative overflow-hidden">
+    <div class="gradient-overlay position-absolute top-0 start-0 h-100 "></div>
+    <div class="container-lg custom-container ">
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end gap-3 mb-5">
+            <div>
+                <app-section-label>
+                    <app-ping-dot></app-ping-dot>
+                    <span class="small fw-medium" style="color: #d4d4d4;">الأحدث</span>
+                </app-section-label>
+                <h2 class="section-title text-white"> أحدث المقالات </h2>
+                <p class="section-subtitle max-w-lg"> محتوى جديد طازج من المطبعة</p>
+            </div>
+            <a class="read-more d-inline-flex align-items-center fw-semibold" routerLink="/blog">
+                عرض جميع المقالات
+                <i class="fa-solid fa-arrow-left arrow"></i>
+            </a>
+
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            @for (article of blogPosts.slice(3,6); track $index) {
+            <app-post [article]="article"></app-post>
+            }
+        </div>
+    </div>
+</section>
+
+
+<section id="subscribe-form" class="position-relative overflow-hidden">
+    <div class="gradient-overlay position-absolute top-0 start-50  rounded-circle"></div>
+    <div class="custom-container  mx-auto position-relative">
+        <div class="form-container text-center">
+            <div class="icon-container d-flex align-items-center justify-content-center mx-auto">
+                <i class="fa-regular fa-envelope text-white fa-xl "></i>
+            </div>
+            <h2 class="text-white mb-3">
+                اشترك في
+                <span class="gradient-text">نشرتنا الإخبارية</span>
+            </h2>
+            <p class="text-neutral-400 mx-auto text-center">احصل على نصائح التصوير الحصرية ودروس جديدة مباشرة في بريدك
+                الإلكتروني</p>
+            <form action="" class="d-flex flex-column flex-md-row mx-auto justify-content-center">
+                <input type="email" name="userEmail" id="userEmail" placeholder="أدخل بريدك الإلكتروني">
+                <button class="subscribe-btn py-3 px-4 text-white border-0 ">اشترك الآن</button>
+            </form>
+            <div class="d-flex flex-wrap  align-items-center justify-content-center gap-3 text-neutral-500">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="authors d-flex">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face"
+                            alt="">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face"
+                            alt=""> <img
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                            alt="">
+                    </div>
+                    <span>
+                        انضم لـ
+                        <span class="text-white fw-medium">+10,000</span>
+                        مصور
+                    </span>
+                </div>
+                <span class="dot-shape rounded-circle"></span>
+                <span>بدون إزعاج</span>
+                <span class="dot-shape rounded-circle text-danger"></span>
+                <span>إلغاء الاشتراك في أي وقت</span>
+            </div>
+        </div>
+    </div>
+</section>

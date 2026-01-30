@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #F97316;
+}
+
+.gradient-btn {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.gradient-btn:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+.transparent-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.transparent-btn:hover {
+    color: #f97316;
+    background: #f973161a;
+    border-color: #f97316;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+.text-neutral-500 {
+    color: #737373;
+}
+
+.text-neutral-400 {
+    color: #a1a1a1;
+}
+
+.section-title {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #a1a1a1;
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+.read-more {
+    font-size: 14px;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #ff6900;
+    gap: 8px
+}
+
+.read-more .arrow {
+    transition: all 0.3s;
+}
+
+.read-more:hover .arrow {
+    transform: translateX(-4px);
+}
+
+.bg-neutral-600 {
+    background-color: #525252;
+}
+
+.custom-container {
+    padding-inline: 16px !important;
+}
+
+@media (min-width: 576px) {
+    .custom-container {
+        padding-inline: 24px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding-inline: 32px !important;
+    }
+}

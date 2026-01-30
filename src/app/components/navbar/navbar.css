@@ -1,0 +1,140 @@
+/* Navbar general */
+.custom-navbar {
+    background-color: #0F0E0E;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #262626;
+    transition: all 0.5s ease;
+    padding-inline: 32px;
+}
+.navbar-toggler {
+    border: transparent;
+    border-radius: 12px;
+    padding: 12px;
+    color: #a1a1a1;
+    transition: all 0.3s;
+}
+
+.navbar-toggler:hover {
+    color: white;
+    border: 1px solid #262626;
+}
+
+.navbar-toggler svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Logo */
+.logo-wrapper {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.logo-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.brand-title {
+    font-size: 20px;
+    font-weight: 700;
+    /* mn chatgpt 3shan n3ml gradient text */
+    background: linear-gradient(to right, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-subtitle {
+    font-size: 12px;
+    color: rgba(255, 165, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* Navbar links */
+
+.navbar-nav .nav-link {
+    padding: 10px 24px;
+    color: #cccccc;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    /* background-color: rgba(255, 255, 255, 0.05); */
+}
+
+.navbar-nav .nav-link.active {
+    color: #ff6900;
+    background: #fe6e001a;
+    border: 1px solid #fe6e004d;
+}
+
+
+.search-btn {
+    padding: 12px;
+    color: #737373;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.search-btn i {
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    color: #f97316;
+    background-color: #161616;
+    border-color: #262626;
+}
+
+
+
+
+.navbar-nav {
+    border: none;
+    /* نشيل border الأساسي */
+    padding: 0;
+    /* نشيل الـpadding لو لازم */
+}
+
+.collapse {
+    border: 3px #262626 solid;
+    background-color: #161616;
+    border-radius: 30px;
+    padding: 16px;
+}
+
+/**/
+@media (min-width: 992px) {
+    .navbar-nav .nav-link.active {
+        color: #ffffff;
+        background: linear-gradient(to right, #ff6900, #f54a00);
+    }
+
+    .navbar-nav {
+        border: 3px rgba(255, 255, 255, 0.05) solid;
+        border-radius: 30px;
+        padding: 6px;
+    }
+
+    .collapse {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+        background-color: #161616;
+    }
+
+    .custom-navbar {
+        background-color: #161616;
+    }
+
+}

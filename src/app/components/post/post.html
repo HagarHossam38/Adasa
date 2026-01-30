@@ -1,0 +1,40 @@
+<article class="col">
+    <div class="recent-card overflow-auto">
+        <a routerLink="/blog">
+            <div class="img-container position-relative overflow-hidden">
+                <img [src]="article.image" [alt]="article.title" class="w-100">
+                <div class="img-overlay position-absolute"></div>
+                <span
+                    class="img-badge position-absolute py-1 rounded-pill text-white fw-semibold">{{article.category}}</span>
+
+            </div>
+            <div class="p-4">
+                <div class="info d-flex align-items-center text-neutral-500">
+                    <span class="d-flex align-items-center gap-1 fw-normal">
+                        <i class="fa-regular fa-clock"></i>
+                        {{article.readTime}}
+                    </span>
+                    <span class="dot-shape rounded-circle bg-neutral-600"></span>
+                    <span class="fw-normal"> {{formatDateArabic(article.date)}}</span>
+                </div>
+                <h3 class="fw-bold mb-3 title"> {{article.title}} </h3>
+                <p class="text-neutral-400 ">{{article.excerpt}}</p>
+                <div class="card-footer d-flex justify-content-between align-items-center pt-3">
+                    <div class="d-flex align-items-center gap-3">
+                        <img [src]="article.author.avatar" width="100%"
+                            class="avatar-img object-fit-cover rounded-circle" [alt]="article.author.name">
+                        <div>
+                            <p class="fw-medium text-white m-0" style="font-size: 14px;">
+                                {{article.author.name}}</p>
+                            <p class="text-neutral-500 m-0" style="font-size: 12px;">
+                                {{article.author.role}}</p>
+                        </div>
+                    </div>
+                    <div class="arrow-open rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</article>

@@ -1,0 +1,106 @@
+/*recent article card*/
+.recent-card {
+    min-height: 470px;
+}
+
+.recent-card {
+    border-radius: 24px;
+    background-color: #161616;
+    border: 1px solid #0a0a0acc;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+
+
+.recent-card:hover {
+    border-color: #333;
+    transform: translateY(-4px);
+}
+
+.recent-card .img-container {
+    height: 208px;
+}
+
+.recent-card .img-container .img-overlay {
+    inset: 0;
+    background: linear-gradient(to top, #00000099, transparent 50%, transparent);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.recent-card .img-container .img-badge {
+    padding-inline: 12px;
+    top: 16px;
+    right: 16px;
+    border: 1px solid #333333;
+    background: #0a0a0acc;
+    font-size: 12px;
+}
+
+.recent-card:hover .img-container .img-overlay {
+    opacity: 1;
+}
+
+.recent-card .info {
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.recent-card .info .dot-shape {
+    width: 4px;
+    height: 4px;
+}
+
+.recent-card .title {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.recent-card:hover .title {
+    color: #ff6900;
+}
+
+.recent-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.recent-card .avatar-img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #262626;
+}
+
+.recent-card .card-footer {
+    border-top: 1px solid #262626;
+}
+
+.recent-card .card-footer .arrow-open {
+    width: 32px;
+    height: 32px;
+    background-color: #ff69001a;
+    border: 1px solid #ff690033;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.recent-card .card-footer .arrow-open svg,
+.recent-card .card-footer .arrow-open i {
+    color: #ff6900;
+    transition: all 0.3s;
+}
+
+.recent-card:hover .card-footer .arrow-open {
+    background-color: #ff6900;
+    border: transparent;
+}
+
+.recent-card:hover .card-footer .arrow-open svg,
+.recent-card:hover .card-footer .arrow-open i {
+    color: white;
+}

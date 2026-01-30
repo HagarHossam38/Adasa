@@ -1,0 +1,43 @@
+<section id="notFound" class="position-relative overflow-hidden">
+    <app-grid-background></app-grid-background>
+    <div class="animated-shapes position-absolute start-0 top-0 w-100 h-100 ">
+        <div class="circle circle-orange"></div>
+        <div class="circle circle-yellow"></div>
+    </div>
+    <div class="content position-relative px-3 mx-auto text-center">
+        <h1 class="gradient-title text-center">404</h1>
+        <div class="angry-face mx-auto position-relative">
+            <div class="icon-container rounded-circle position-absolute top-50 start-50 translate-middle">
+                <i class="fa-regular fa-face-frown"></i>
+            </div>
+            <!-- Small Orange Square -->
+            <div class="position-absolute animated-square"></div>
+
+            <!-- Small Yellow Dot -->
+            <div class="position-absolute animated-dot"></div>
+        </div>
+        <h2 class="fw-bold text-white mb-4">عفواً! الصفحة غير موجودة</h2>
+        <p>الصفحة التي تبحث عنها غير موجودة أو تم نقلها. دعنا نعيدك إلى المسار الصحيح.</p>
+        <div class="buttons d-flex flex-column flex-sm-row justify-content-center gap-4 mb-5">
+            <div class="btn gradient-btn d-flex justify-content-center align-items-center gap-2" routerLink="/home">
+                <i class="fa-regular fa-house"></i>
+                الذهاب إلي الرئيسية
+            </div>
+            <div class="btn transparent-btn d-flex justify-content-center align-items-center gap-2" routerLink="/blog">
+                <i class="fa-regular fa-newspaper"></i>
+                تصفح المقالات
+            </div>
+        </div>
+        <div class="helping-section">
+            <p class="mb-3">قد تجد هذه مفيدة:</p>
+            <div class="links d-flex  flex-wrap justify-content-center align-items-center gap-4">
+                <a routerLink="/blog">المدونة</a>
+                <span>•</span>
+                <a routerLink="/about">من نحن</a>
+                <span>•</span>
+                <a routerLink="/privacy">الخصوصية</a>
+
+            </div>
+        </div>
+    </div>
+</section>

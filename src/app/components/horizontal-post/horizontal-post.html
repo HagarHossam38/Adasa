@@ -1,0 +1,50 @@
+<article class="blog position-relative overflow-hidden mb-4">
+    <a class="d-block" routerLink="\blog">
+        <div class="row row-cols-1 row-cols-md-2 g-0">
+            <div class="col overflow-hidden img-container flex-shrink-0">
+                <img class="w-100 h-100 object-fit-cover" [src]="article.image" [alt]="article.title">
+                <div class="overlay-gradient"></div>
+            </div>
+
+            <div class="col flex-fill blog-content p-4 d-flex flex-column">
+                <div class="d-flex align-items-center mb-3 gap-3">
+                    <span class="badge-light">{{article.category}}</span>
+                    <span class="d-flex align-items-center gap-1  text-neutral-500 small fw-normal">
+                        <i class="fa-regular fa-clock"></i>
+                        {{article.readTime}}
+                    </span>
+                    <span class="d-flex align-items-center gap-1  text-neutral-500 small fw-normal">
+                        <i class="fa-regular fa-calendar"></i>
+                        {{formatDateArabic(article.date)}}
+                    </span>
+                </div>
+                <h2 class="card-title mb-3">
+                    {{article.title}}
+                </h2>
+                <!-- Description -->
+                <p class="card-text text-neutral-400  mb-4 fw-normal">
+                    {{article.excerpt}}
+                </p>
+                <div class="blog-footer d-flex justify-content-between  mt-auto">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="">
+                            <img [src]="article.author.avatar" [alt]="article.author.name" width="100%"
+                                class="avatar-img object-fit-cover rounded-circle">
+                        </div>
+                        <div>
+                            <p class="fw-semibold text-white m-0" style="font-size: 14px;">
+                                {{article.author.name}} </p>
+                            <p class="text-neutral-500 m-0" style="font-size: 12px;"> {{article.author.role}}</p>
+                        </div>
+                    </div>
+
+                    <span class="read-more d-none d-sm-inline-flex align-items-center fw-semibold">
+                        اقرأ المقال
+                        <i class="fa-solid fa-arrow-left arrow"></i>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
