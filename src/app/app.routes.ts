@@ -7,7 +7,7 @@ import { Notfound } from './components/notfound/notfound';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: Home, title: 'عدسة - عالم التوصير' },
+    { path: 'home', component: Home, title: 'عدسة - عالم التصوير' },
     { path: 'about', component: About, title: 'عدسة - من نحن' },
     { path: 'blog', component: Blog, title: 'عدسة - المدونة' },
     { path: '404', component: Notfound, title: 'خطأ' },
