@@ -1,0 +1,76 @@
+#about-header {
+    background-color: #0a0a0a;
+    min-height: 90vh;
+}
+
+#about-header .container {
+    padding-block: 80px !important;
+}
+
+#about-header .circle {
+    filter: blur(64px);
+}
+
+#about-header .circle-orange {
+    opacity: 0.3;
+    width: 288px;
+    height: 288px;
+    top: 80px;
+    left: 80px;
+    background-color: #ff690033;
+}
+
+#about-header .circle-yellow {
+    opacity: 0.3;
+    width: 384px;
+    height: 384px;
+    bottom: 80px;
+    right: 80px;
+    background-color: #f0b1001a;
+}
+
+#about-header p {
+    font-size: 20px;
+    color: #a1a1a1;
+    font-weight: 400;
+    line-height: 39px;
+    max-width: 768px;
+    margin-bottom: 48px;
+}
+
+/*glass cards*/
+.glass-card-container {
+    max-width: 896px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.glass-card {
+    width: 100%;
+    border-radius: 24px;
+    -webkit-backdrop-filter: blur(20px);
+    background: #161616cc;
+    border: 1px solid #262626;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+
+#about-header .glass-card .gradient-text {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0;
+}
+
+#about-header .glass-card i,
+#about-header .glass-card svg {
+    font-size: 24px;
+    color: #ff6900;
+}
+
+#about-header .glass-card :last-child {
+    font-size: 14px;
+    color: #737373;
+    margin: 0;
+    line-height: 20px;
+}

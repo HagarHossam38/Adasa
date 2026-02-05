@@ -15,30 +15,10 @@
 
 
 
-.header-title {
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 24px;
-    line-height: 1.1;
-    letter-spacing: 1.25;
-    font-size: 48px;
-}
-
-.gradient-text {
-    background: linear-gradient(to right, #f97316, #fbbf24);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 
-#hero-header p {
-    font-size: 20px;
-    color: #a1a1a1;
-    font-weight: 400;
-    line-height: 39px;
-    max-width: 672px;
-    margin-bottom: 40px;
-}
+
+
 
 .circle {
     filter: blur(64px);
@@ -70,11 +50,11 @@
 }
 
 
-.glass-card-container {
+#hero-header .glass-card-container {
     max-width: 768px;
 }
 
-.glass-card {
+#hero-header .glass-card {
     border-radius: 24px;
     -webkit-backdrop-filter: blur(20px);
     background: #161616cc;
@@ -82,7 +62,7 @@
     transition: all 0.3s;
 }
 
-.glass-card:hover {
+#hero-header .glass-card:hover {
     transform: scale(105%);
 }
 
@@ -483,10 +463,6 @@
         padding-inline: 32px;
     }
 
-    .header-title {
-        font-size: 72px;
-    }
-
     #subscribe-form .form-container {
         padding: 64px;
     }
@@ -500,14 +476,6 @@
 /* Responsive */
 @media (min-width: 768px) {
 
-
-    .header-title {
-        font-size: 60px;
-    }
-
-    #hero-header p {
-        font-size: 24px;
-    }
 
     #hero-header .glass-card .gradient-text {
         font-size: 30px;
